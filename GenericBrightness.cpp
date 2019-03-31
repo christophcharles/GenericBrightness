@@ -46,7 +46,7 @@ OSDictionary * getDisplayParams(IODisplay * display){
 }
 
 IODisplay * GenericBrightness::getDisplay(void){
-    IODisplay * displayRes;
+    IODisplay * displayRes = NULL;
     OSIterator * displayList;
     displayList = getMatchingServices(serviceMatching("IOBacklightDisplay"));
     if (displayList)

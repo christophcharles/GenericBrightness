@@ -22,7 +22,7 @@ The original code does not have a licence... But the code is still freely availa
 
 ### Binaries
 
-You can either compile using Xcode 10.2 or download directly binary releases.
+You can either compile using Xcode 10.2 or download directly binary releases at: https://github.com/christophcharles/GenericBrightness/releases .
 
 ### Configuration
 

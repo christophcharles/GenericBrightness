@@ -21,7 +21,8 @@ You can either compile using Xcode 10.2 or download directly binary releases.
 The full explanation is still available at: https://www.insanelymac.com/forum/topic/236835-updated-2012-genericbrightnesskext/
 
 Here is a quick reminder though:
-- First, you need to add a PNLF device to your DSDT. This is quite straightfoward and can be done in the following way:  
+- First, you need to add a PNLF device to your DSDT. This is quite straightfoward and can be done in the following way:
+
 ```
 Device (PNLF)
 {
@@ -31,11 +32,13 @@ Device (PNLF)
     Name (_STA, 0x0B)
 }
 ```
+
 - Then, you need to mark your screen. Find you GPU node. It is usually something like ```_SB.PCI0.GFX0``` or if you renamed it to ```IGPU _SB.PCI0.IGPU```. Under this node, you will find something like ```LCD```, ```CRT``` or ```TV```. In my case, it was for instance ```_SB.PCI0.IGPU.LCD0```. The device must have the following methods :
     - ```_BCM```
     - ```_BCQ```
     - ```_BCL```
     If you have found it, at the line: ```Name (_HID, EisaId ("LCD1234"))```. This leads to something like:  
+
 ```
 Device (LCD)
 {

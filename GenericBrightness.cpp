@@ -7,13 +7,13 @@ OSDefineMetaClassAndStructors(GenericBrightness, IOService)
 
 IOService* GenericBrightness::probe( IOService *provider, SInt32 *score )
 {
-    if( !super::probe( provider, score )) return( 0 );
+    if( !super::probe( provider, score ))
+        return( 0 );
 	return (this);
 }
 
 bool GenericBrightness::start( IOService * provider )
-{	
-	
+{
 	if(!provider || !super::start(provider))
 		return false;
 	
@@ -46,7 +46,7 @@ OSDictionary * getDisplayParams(IODisplay * display){
 }
 
 IODisplay * GenericBrightness::getDisplay(void){
-    IODisplay * displayRes;
+    IODisplay * displayRes = NULL;
     OSIterator * displayList;
     displayList = getMatchingServices(serviceMatching("IOBacklightDisplay"));
     if (displayList)

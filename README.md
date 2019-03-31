@@ -21,7 +21,7 @@ You can either compile using Xcode 10.2 or download directly binary releases.
 The full explanation is still available at: https://www.insanelymac.com/forum/topic/236835-updated-2012-genericbrightnesskext/
 
 Here is a quick reminder though:
-- First, you need to add a PNLF device to your DSDT. This is quite straightfoward and can be done in the following way:
+- First, you need to add a PNLF device to your DSDT. This is quite straightfoward and can be done in the following way:  
 ```
 Device (PNLF)
 {
@@ -35,7 +35,7 @@ Device (PNLF)
     - ```_BCM```
     - ```_BCQ```
     - ```_BCL```
-    If you have found it, at the line: ```Name (_HID, EisaId ("LCD1234"))```. This leads to something like:
+    If you have found it, at the line: ```Name (_HID, EisaId ("LCD1234"))```. This leads to something like:  
 ```
 Device (LCD)
 {
@@ -59,12 +59,12 @@ Device (LCD)
 }
 ```
 
-Once all this is done, put GenericBrightness.kext in /Library/Extensions/, put the correct permissions :
+Once all this is done, put GenericBrightness.kext in /Library/Extensions/, put the correct permissions :  
 ```sh
 $ chown -R root:wheel GenericBrightness.kext
 $ chmod -R 755 GenericBrightness.kext
 ```
-And rebuild the kernel cache:
+And rebuild the kernel cache:  
 ```sh
 $ kextcache -i /
 ```
